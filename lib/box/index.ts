@@ -1,5 +1,5 @@
 import { spawn, ChildProcess } from 'child_process';
-import { writeToStdin } from '../sdtin-write';
+import { writeToStdin } from '../stdin-write';
 import { streamDataToString } from '../stream-to-string';
 import { Result } from '../types';
 
