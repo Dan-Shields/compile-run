@@ -6,7 +6,7 @@ import crypto from 'crypto';
  * @param ext Extension of the file
  */
 export function getFileName(ext?: string): string {
-    const rand = crypto.pseudoRandomBytes(16).toString('hex');
+    const rand = crypto.pseudoRandomBytes(2).toString('hex');
     const ts = new Date().getTime();
     if (ext) {
         return `source-${rand}-${ts}.${ext}`;

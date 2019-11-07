@@ -1,7 +1,7 @@
 import { Options } from "../types";
 import { getFileName } from "../source-writer";
 import { getExecutableExt } from "../executable/executable-ext";
-import { tmpPath, checkExistsAndMakeDir } from "../init";
+import { checkExistsAndMakeDir } from "../init";
 import path from 'path';
 import { execute } from "../execute-command";
 
@@ -14,7 +14,7 @@ export async function compileC(filePath: string, options?: Options): Promise<str
     let compileTimeout = options && options.compileTimeout || 3000;
     let executableExt = getExecutableExt();
     const compilationPath: string = options && options.compilationPath || 'gcc';
-    let cPath = path.join(tmpPath, 'c');
+    let cPath = path.join(process.cwd(), 'bin');
     checkExistsAndMakeDir(cPath);
     let executableName = getFileName(executableExt);
     let executablePath = path.join(cPath, executableName);
