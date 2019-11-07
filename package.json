@@ -18,14 +18,10 @@
     "run",
     "compile-run",
     "execute",
-    "python",
-    "java",
     "node",
     "nodejs",
     "gcc",
-    "cpp",
-    "c",
-    "c++"
+    "c"
   ],
   "author": "vibhor agrawal <vibhor349a@rediffmail.com>",
   "license": "MIT",
