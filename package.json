@@ -1,6 +1,6 @@
 {
   "name": "@dans98/compile-run",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "description": "You can execute programs in different languages using this package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
