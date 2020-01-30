@@ -11,4 +11,5 @@ export interface Result {
      */
     cpuUsage: number;
     errorType?: 'compile-time' | 'run-time' | 'pre-compile-time';
+    filePath?: string;
 }

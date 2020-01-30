@@ -21,6 +21,7 @@ export async function compileC(filePath: string, options?: Options): Promise<str
     let res = await execute(compilationPath, [filePath, '-o', executablePath], { timeout: compileTimeout });
     if (res.exitCode !== 0) {
         res.errorType = 'compile-time';
+        res.filePath = filePath;
         throw res;
     }
     return executablePath;
