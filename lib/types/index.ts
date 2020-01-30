@@ -9,3 +9,5 @@ export { LanguageExtMap, Result, Options };
  * @param res The result object containing stderr and stdout
  */
 export type errorResultCallback = (err: Error | undefined, res?: Result) => void;
+
+export type CompileCSourceResult = {filePath: string, executablePath: string};

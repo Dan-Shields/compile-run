@@ -31,8 +31,8 @@ export async function runCSource(sourceCode: string, ...args: any[]): Promise<Re
 
 export async function runCSourceAndReturnPromise(sourceCode: string, options?: Options): Promise<Result> {
     try {
-        let executablePath = await compileCSource(sourceCode, options);
-        return runExecutable(executablePath, options);
+        let paths = await compileCSource(sourceCode, options);
+        return runExecutable(paths.executablePath, options);
     }
     catch (err) {
         return err;
